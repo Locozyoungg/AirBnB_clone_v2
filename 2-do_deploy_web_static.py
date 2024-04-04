@@ -6,9 +6,9 @@ Fabric script that distributes an archive to your web servers
 from fabric.api import env, put, run
 from os.path import exists
 
-env.hosts = ['<IP web-01>', '<IP web-02>']  # Replace with your web server IPs
-env.user = 'ubuntu'  # Replace with your username
-env.key_filename = '/path/to/your/ssh/key'  # Replace with the path to your SSH private key
+env.hosts = ['192.168.1.100', '192.168.1.101']  # Replace with your web server IPs
+env.user = '172.17.0.18 '
+env.key_filename = '/home/ssh/'
 
 
 def do_deploy(archive_path):
